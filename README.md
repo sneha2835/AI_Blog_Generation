@@ -6,9 +6,13 @@ Generate AI-powered blogs with Django, Streamlit, and LLaMA 2!
 
 This project is an AI-powered Blog Generator that allows users to:
 ✅ Generate AI-written blogs based on title, word count & target audience
+
 ✅ Save & view generated blogs in MySQL database
+
 ✅ User authentication (Register/Login with JWT authentication)
+
 ✅ View saved blogs in the sidebar
+
 ✅ Fast & optimized AI model (LLaMA 2)
 
 
@@ -24,17 +28,14 @@ Deployment	        Local (VS Code)
 
 
 📥 Installation Guide
+
 🔹 1️⃣ Clone the Repository
-sh
-Copy
-Edit
+
 git clone https://github.com/sneha2835/AI_Blog_Generation.git
 cd AI-Blog-Generator
 
 🔹 2️⃣ Set Up Virtual Environment
-sh
-Copy
-Edit
+
 # For Windows
 python -m venv venv
 venv\Scripts\activate
@@ -45,18 +46,14 @@ source venv/bin/activate
 
 
 🔹 3️⃣ Install Dependencies
-sh
-Copy
-Edit
+
 pip install -r requirements.txt
 
 
 🗄️ Database Setup (MySQL)
 
 4️⃣ Install MySQL & Create Database
-sh
-Copy
-Edit
+
 mysql -u root -p
 CREATE DATABASE blog_db;
 EXIT;
@@ -64,9 +61,7 @@ EXIT;
 5️⃣ Configure MySQL in Django (.env file)
 Create a .env file in the root directory:
 
-ini
-Copy
-Edit
+
 SECRET_KEY="your-secret-key"
 DEBUG=True
 MYSQL_DB_NAME="blog_db"
@@ -76,30 +71,22 @@ MYSQL_HOST="localhost"
 MYSQL_PORT="3306"
 
 6️⃣ Apply Migrations
-sh
-Copy
-Edit
+
 python manage.py makemigrations
 python manage.py migrate
 
 7️⃣ Create Superuser (Admin)
-sh
-Copy
-Edit
+
 python manage.py createsuperuser
 🏃 Run the Project
 
 🔹 8️⃣ Start the Django Backend
-sh
-Copy
-Edit
+
 python manage.py runserver
 The backend runs at http://127.0.0.1:8000/
 
 🔹 9️⃣ Start the Streamlit Frontend
-sh
-Copy
-Edit
+
 cd streamlit_app
 streamlit run app.py
 The frontend runs at http://localhost:8501/
@@ -115,6 +102,7 @@ The frontend runs at http://localhost:8501/
 4️⃣ Save & view generated blogs in history
 
 ⚡ Optimizations for Faster Model Inference
+
 ✅ Reduced max_new_tokens
 
 ✅ Used streaming for faster blog generation
@@ -124,6 +112,7 @@ The frontend runs at http://localhost:8501/
 ✅ Lowered temperature for stability
 
 🎯 Project Features
+
 ✅ User Registration & Login (JWT Auth)
 
 ✅ Generate AI Blogs (LLaMA 2 Model)
@@ -148,9 +137,7 @@ This project is open-source under the MIT License.
 3️⃣ Create .gitignore
 To avoid pushing unnecessary files, create a .gitignore file:
 
-txt
-Copy
-Edit
+
 venv/
 __pycache__/
 *.pyc
@@ -160,9 +147,7 @@ __pycache__/
 📌 Final Steps to Push Code to GitHub
 Now, let’s commit and push everything:
 
-sh
-Copy
-Edit
+
 # Initialize Git repository (if not already)
 git init
 

@@ -24,7 +24,6 @@ Deployment	        Local (VS Code)
 
 
 📥 Installation Guide
-
 🔹 1️⃣ Clone the Repository
 sh
 Copy
@@ -106,22 +105,33 @@ streamlit run app.py
 The frontend runs at http://localhost:8501/
 
 🔑 User Authentication (Login/Register)
+
 1️⃣ Register using the sidebar
+
 2️⃣ Login with username & password
+
 3️⃣ Generate blogs using AI model
+
 4️⃣ Save & view generated blogs in history
 
 ⚡ Optimizations for Faster Model Inference
 ✅ Reduced max_new_tokens
+
 ✅ Used streaming for faster blog generation
+
 ✅ Increased batch size
+
 ✅ Lowered temperature for stability
 
 🎯 Project Features
 ✅ User Registration & Login (JWT Auth)
+
 ✅ Generate AI Blogs (LLaMA 2 Model)
+
 ✅ Save Generated Blogs to MySQL
+
 ✅ View Saved Blogs in Sidebar
+
 ✅ Clean & Minimal UI
 
 🤝 Contributing
@@ -132,6 +142,7 @@ This project is open-source under the MIT License.
 
 📞 Contact
 📧 Email: snehakamatam28@example.com
+
 🌐 GitHub: github.com/sneha2835
 
 3️⃣ Create .gitignore

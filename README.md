@@ -4,6 +4,7 @@ Generate AI-powered blogs with Django, Streamlit, and LLaMA 2!
 
 🎯 Project Overview
 
+
 This project is an AI-powered Blog Generator that allows users to:
 ✅ Generate AI-written blogs based on title, word count & target audience
 
@@ -18,31 +19,34 @@ This project is an AI-powered Blog Generator that allows users to:
 
 🛠 Tech Stack Used
 
-Component	        Technology
-Frontend	        Streamlit, Tailwind CSS (optional)
+Component	          Technology
+Frontend	          Streamlit, Tailwind CSS (optional)
 Backend	            Django, Django REST Framework (DRF)
-Database	        MySQL
-AI Model	        LLaMA 2 (local execution)
+Database	          MySQL
+AI Model	          LLaMA 2 (local execution)
 Authentication	    JWT (JSON Web Tokens)
 Deployment	        Local (VS Code)
 
 
 📥 Installation Guide
 
+
 🔹 1️⃣ Clone the Repository
 
 git clone https://github.com/sneha2835/AI_Blog_Generation.git
 cd AI-Blog-Generator
 
+
 🔹 2️⃣ Set Up Virtual Environment
 
-# For Windows
+##  For Windows
 python -m venv venv
 venv\Scripts\activate
 
-# For macOS/Linux
+## For macOS/Linux
 python3 -m venv venv
 source venv/bin/activate
+
 
 
 🔹 3️⃣ Install Dependencies
@@ -52,11 +56,13 @@ pip install -r requirements.txt
 
 🗄️ Database Setup (MySQL)
 
+
 4️⃣ Install MySQL & Create Database
 
 mysql -u root -p
 CREATE DATABASE blog_db;
 EXIT;
+
 
 5️⃣ Configure MySQL in Django (.env file)
 Create a .env file in the root directory:
@@ -70,26 +76,31 @@ MYSQL_PASSWORD="root"
 MYSQL_HOST="localhost"
 MYSQL_PORT="3306"
 
+
 6️⃣ Apply Migrations
 
 python manage.py makemigrations
 python manage.py migrate
+
 
 7️⃣ Create Superuser (Admin)
 
 python manage.py createsuperuser
 🏃 Run the Project
 
+
 🔹 8️⃣ Start the Django Backend
 
 python manage.py runserver
 The backend runs at http://127.0.0.1:8000/
+
 
 🔹 9️⃣ Start the Streamlit Frontend
 
 cd streamlit_app
 streamlit run app.py
 The frontend runs at http://localhost:8501/
+
 
 🔑 User Authentication (Login/Register)
 
@@ -101,6 +112,8 @@ The frontend runs at http://localhost:8501/
 
 4️⃣ Save & view generated blogs in history
 
+
+
 ⚡ Optimizations for Faster Model Inference
 
 ✅ Reduced max_new_tokens
@@ -110,6 +123,7 @@ The frontend runs at http://localhost:8501/
 ✅ Increased batch size
 
 ✅ Lowered temperature for stability
+
 
 🎯 Project Features
 
@@ -123,18 +137,20 @@ The frontend runs at http://localhost:8501/
 
 ✅ Clean & Minimal UI
 
+
 🤝 Contributing
 Feel free to fork, improve, and submit pull requests! 🚀
 
-📜 License
-This project is open-source under the MIT License.
 
 📞 Contact
 📧 Email: snehakamatam28@example.com
 
 🌐 GitHub: github.com/sneha2835
 
-3️⃣ Create .gitignore
+
+
+# Create .gitignore
+
 To avoid pushing unnecessary files, create a .gitignore file:
 
 

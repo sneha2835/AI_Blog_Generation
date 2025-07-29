@@ -41,9 +41,11 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.AllowAny",  # Allow registration & login without auth
+        "rest_framework.permissions.AllowAny",
     ],
+    "EXCEPTION_HANDLER": "api.exceptions.custom_exception_handler"
 }
+
 
 # --------------------------
 # JWT Token Configuration

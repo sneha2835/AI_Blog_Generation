@@ -1,37 +1,6 @@
 import streamlit as st
 import requests
 import os
-from langchain_community.llms import CTransformers
-
-# ✅ Load Model Once & Cache It
-@st.cache_resource
-def load_model():
-    MODEL_PATH = "models/llama-2-7b-chat.Q4_K_M.gguf"
-
-    if not os.path.exists(MODEL_PATH):
-        st.error("❌ ERROR: Model file not found.")
-        st.stop()
-
-    try:
-        llm = CTransformers(
-            model=MODEL_PATH,
-            model_type="llama",
-            config={
-                "max_new_tokens": 100,
-                "temperature": 0.1,
-                "context_length": 128,
-                "batch_size": 16,
-                "stream": True
-            }
-        )
-        st.success("✅ LLaMA 2 Model Loaded & Cached!")
-        return llm
-    except Exception as e:
-        st.error(f"❌ ERROR: Failed to load LLaMA model! {str(e)}")
-        st.stop()
-
-# ✅ Load Model
-llm = load_model()
 
 # ✅ API Base URL
 API_BASE_URL = "http://127.0.0.1:8000/api"
@@ -138,10 +107,18 @@ elif st.session_state["page"] == "generate":
     @st.cache_data
     def generate_blogs(title, audience, word_count):
         blogs = []
+        headers = {"Authorization": f"Bearer {st.session_state['token']}"}
         for i in range(3):  
-            prompt = f"Variation {i+1}: Write a {word_count}-word blog for {audience} about {title}."
-            response = llm.invoke(prompt)
-            blogs.append(response if response.strip() else "❌ Error: No valid content generated.")
+            response = requests.post(
+                f"{API_BASE_URL}/generate-blog/",
+                json={"title": title, "audience": audience, "word_count": word_count},
+                headers=headers
+            )
+            if response.status_code == 200:
+                blog = response.json().get("blog_content", "")
+                blogs.append(blog if blog.strip() else "❌ Error: No valid content generated.")
+            else:
+                blogs.append(f"❌ API Error: {response.status_code} - {response.text}")
         return blogs
 
     if st.button("Generate Blog"):

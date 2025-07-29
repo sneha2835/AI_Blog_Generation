@@ -1,12 +1,10 @@
 from django.http import JsonResponse
 
-def home(request):
-    return JsonResponse({"message": "Welcome to the Blog Generator API!"})
-def register_user(request):
-    return JsonResponse({"message": "Register API working!"})
+def handler404(request, exception):
+    return JsonResponse({"error": "Endpoint not found"}, status=404)
 
-def login_user(request):
-    return JsonResponse({"message": "Login API working!"})
+def handler500(request):
+    return JsonResponse({"error": "Internal server error"}, status=500)
 
-def blog_view(request):
-    return JsonResponse({"message": "Blog API working!"})
+handler404 = "BlogGen.urls.handler404"
+handler500 = "BlogGen.urls.handler500"

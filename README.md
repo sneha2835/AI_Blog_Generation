@@ -23,43 +23,8 @@ This project is an AI-powered Blog Generator that allows users to:
 | Deployment              | Local (VS Code)                     |
 
 ## 📂 Project Structure
-Blog_Gen/
-├── backend/
-│   ├── api/
-│   │   ├── __init__.py
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── exceptions.py
-│   │   ├── migrations/
-│   │   ├── models.py
-│   │   ├── serializers.py
-│   │   ├── tests.py
-│   │   ├── urls.py
-│   │   ├── utils/
-│   │   │   ├── __pycache__/
-│   │   │   └── model_loader.py
-│   │   └── views.py
-│   ├── BlogGen/
-│   │   ├── __init__.py
-│   │   ├── asgi.py
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   ├── views.py
-│   │   └── wsgi.py
-│   ├── manage.py
-│   └── requirements.txt
-├── frontend/
-│   ├── app.py
-│   └── requirements.txt
-├── models/
-│   └── llama-2-7b-chat.Q4_K_M.gguf
-├── venv/
-├── GenBlogapi.txt
-├── push_sequential.sh
-└── README.md
 
-
-
+<img width="350" height="676" alt="image" src="https://github.com/user-attachments/assets/ae6b6e8c-d502-4e67-a09c-5885306a270c" />
 
 ## 📥 Installation Guide
 

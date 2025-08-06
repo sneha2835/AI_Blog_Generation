@@ -105,6 +105,10 @@ streamlit run app.py
 
 The frontend runs at http://localhost:8501/
 
+### 1. Register
+<img width="1919" height="930" alt="image" src="https://github.com/user-attachments/assets/690009f5-c662-4aed-848d-8bb4345a4854" />
+
+### 2. Login
 
 ## 🔑 User Authentication (Login/Register)
 1️⃣ Register using the sidebar  

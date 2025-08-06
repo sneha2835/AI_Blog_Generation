@@ -1,6 +1,7 @@
 # 📝 AI Blog Generator
 
 🚀 Generate AI-powered blogs with Django, Streamlit, and LLaMA 2!
+
 **AI Blog Generator** is a full-stack application that simplifies blog creation using advanced artificial intelligence. With a clean UI and robust backend, users can generate high-quality blogs by specifying a title, desired word count, and target audience. The system authenticates users, securely saves generated blogs, and enables quick review via a sidebar history — all powered by the locally running LLaMA 2 model for privacy and performance.
 
 ## 🎯 Project Overview

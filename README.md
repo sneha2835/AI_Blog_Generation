@@ -106,9 +106,19 @@ streamlit run app.py
 The frontend runs at http://localhost:8501/
 
 ### 1. Register
-<img width="1919" height="930" alt="image" src="https://github.com/user-attachments/assets/690009f5-c662-4aed-848d-8bb4345a4854" />
+<img width="1919" height="933" alt="image" src="https://github.com/user-attachments/assets/a3fb837e-efb7-41ab-9510-9f30e6b99ae9" />
 
 ### 2. Login
+<img width="1919" height="939" alt="image" src="https://github.com/user-attachments/assets/79d0c0d5-07fe-4251-b939-972acddcf3bb" />
+
+### 3. Blog Generation
+<img width="1919" height="932" alt="Screenshot 2025-08-06 125143" src="https://github.com/user-attachments/assets/8350ef60-c7c1-4824-8a7c-496b1cfcee09" />
+
+### 4. Saved Blogs
+<img width="1919" height="932" alt="image" src="https://github.com/user-attachments/assets/55579169-7870-4dd8-b683-57c96af4ff3a" />
+
+
+
 
 ## 🔑 User Authentication (Login/Register)
 1️⃣ Register using the sidebar  

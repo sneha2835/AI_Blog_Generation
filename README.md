@@ -26,38 +26,39 @@ This project is an AI-powered Blog Generator that allows users to:
 
 Blog_Gen/
 ├── backend/
-│ ├── api/
-│ │ ├── init.py
-│ │ ├── admin.py
-│ │ ├── apps.py
-│ │ ├── exceptions.py
-│ │ ├── migrations/
-│ │ ├── models.py
-│ │ ├── serializers.py
-│ │ ├── tests.py
-│ │ ├── urls.py
-│ │ ├── utils/
-│ │ │ ├── pycache/
-│ │ │ └── model_loader.py
-│ │ └── views.py
-│ ├── BlogGen/
-│ │ ├── init.py
-│ │ ├── asgi.py
-│ │ ├── settings.py
-│ │ ├── urls.py
-│ │ ├── views.py
-│ │ └── wsgi.py
-│ ├── manage.py
-│ └── requirements.txt
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── exceptions.py
+│   │   ├── migrations/
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   ├── utils/
+│   │   │   ├── __pycache__/
+│   │   │   └── model_loader.py
+│   │   └── views.py
+│   ├── BlogGen/
+│   │   ├── __init__.py
+│   │   ├── asgi.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── views.py
+│   │   └── wsgi.py
+│   ├── manage.py
+│   └── requirements.txt
 ├── frontend/
-│ ├── app.py
-│ └── requirements.txt
+│   ├── app.py
+│   └── requirements.txt
 ├── models/
-│ └── llama-2-7b-chat.Q4_K_M.gguf
+│   └── llama-2-7b-chat.Q4_K_M.gguf
 ├── venv/
 ├── GenBlogapi.txt
 ├── push_sequential.sh
 └── README.md
+
 
 
 ## 📥 Installation Guide

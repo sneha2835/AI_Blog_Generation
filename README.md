@@ -23,7 +23,6 @@ This project is an AI-powered Blog Generator that allows users to:
 | Deployment              | Local (VS Code)                     |
 
 ## 📂 Project Structure
-
 Blog_Gen/
 ├── backend/
 │   ├── api/
@@ -58,6 +57,7 @@ Blog_Gen/
 ├── GenBlogapi.txt
 ├── push_sequential.sh
 └── README.md
+
 
 
 

@@ -1,57 +1,90 @@
-📝 AI Blog Generator 🚀
-Generate AI-powered blogs with Django, Streamlit, and LLaMA 2!
+# 📝 AI Blog Generator
 
-🎯 Project Overview
+🚀 Generate AI-powered blogs with Django, Streamlit, and LLaMA 2!
+
+## 🎯 Project Overview
+
 This project is an AI-powered Blog Generator that allows users to:
-✅ Generate AI-written blogs based on Title, Word Count & Target Audience
-✅ Save & View generated blogs in MySQL database
-✅ User authentication (Register/Login with JWT authentication)
-✅ View saved blogs in the sidebar
-✅ Optimized AI model (LLaMA 2) for fast & efficient blog generation
+- ✅ Generate AI-written blogs based on Title, Word Count & Target Audience
+- ✅ Save & View generated blogs in MySQL database
+- ✅ User authentication (Register/Login with JWT authentication)
+- ✅ View saved blogs in the sidebar
+- ✅ Optimized AI model (LLaMA 2) for fast & efficient blog generation
 
-## 🛠 **Tech Stack Used**  
+## 🛠 Tech Stack
 
-| **Component**  | **Technology**  |
-|--------------- |---------------|
-| **Frontend**   |  Streamlit, Tailwind CSS (optional) |
-| **Backend**    | Django, Django REST Framework (DRF) |
-| **Database**   | MySQL |
-| **AI Model**   | LLaMA 2 (Local execution) |
-| **Authentication** | JWT (JSON Web Tokens) |
-| **Deployment** | Local (VS Code) |
+| Component               | Technology                          |
+|-------------------------|-------------------------------------|
+| Frontend                | Streamlit                           |
+| Backend                 | Django, Django REST Framework (DRF) |
+| Database                | MySQL                               |
+| AI Model                | LLaMA 2 (Local execution)           |
+| Authentication          | JWT (JSON Web Tokens)               |
+| Deployment              | Local (VS Code)                     |
+
+## 📂 Project Structure
+
+Blog_Gen/
+├── backend/
+│ ├── api/
+│ │ ├── init.py
+│ │ ├── admin.py
+│ │ ├── apps.py
+│ │ ├── exceptions.py
+│ │ ├── migrations/
+│ │ ├── models.py
+│ │ ├── serializers.py
+│ │ ├── tests.py
+│ │ ├── urls.py
+│ │ ├── utils/
+│ │ │ ├── pycache/
+│ │ │ └── model_loader.py
+│ │ └── views.py
+│ ├── BlogGen/
+│ │ ├── init.py
+│ │ ├── asgi.py
+│ │ ├── settings.py
+│ │ ├── urls.py
+│ │ ├── views.py
+│ │ └── wsgi.py
+│ ├── manage.py
+│ └── requirements.txt
+├── frontend/
+│ ├── app.py
+│ └── requirements.txt
+├── models/
+│ └── llama-2-7b-chat.Q4_K_M.gguf
+├── venv/
+├── GenBlogapi.txt
+├── push_sequential.sh
+└── README.md
 
 
-📥 Installation Guide
-🔹 1️⃣ Clone the Repository
+## 📥 Installation Guide
+
+### 🔹 1️⃣ Clone the Repository
 
 git clone https://github.com/sneha2835/AI_Blog_Generation.git
 cd AI_Blog_Generation
 
-🔹 2️⃣ Set Up Virtual Environment
-For Windows
+### 🔹 2️⃣ Set Up Virtual Environment
 
 python -m venv venv
 venv\Scripts\activate
 
-For macOS/Linux
-
-python3 -m venv venv
-source venv/bin/activate
-
-🔹 3️⃣ Install Dependencies
+### 🔹 3️⃣ Install Dependencies
 
 pip install -r requirements.txt
-🗄️ Database Setup (MySQL)
-4️⃣ Install MySQL & Create Database
+
+### 🔹 4️⃣ Install MySQL & Create Database
 
 mysql -u root -p
-
 CREATE DATABASE blog_db;
 EXIT;
-5️⃣ Configure MySQL in Django (.env file)
+
+### 🔹 5️⃣ Configure MySQL in Django (.env file)
+
 Create a .env file in the root directory and add:
-
-
 SECRET_KEY="your-secret-key"
 DEBUG=True
 MYSQL_DB_NAME="blog_db"
@@ -59,97 +92,100 @@ MYSQL_USER="root"
 MYSQL_PASSWORD="root"
 MYSQL_HOST="localhost"
 MYSQL_PORT="3306"
-6️⃣ Apply Migrations
+
+### 🔹 6️⃣ Apply Migrations
 
 python manage.py makemigrations
 python manage.py migrate
-7️⃣ Create Superuser (Admin)
+
+### 🔹 7️⃣ Create Superuser (Admin)
 
 python manage.py createsuperuser
-📌 Download & Add LLaMA 2 Model
-The LLaMA 2 model file is NOT included in this repository due to its large size.
-You must manually download it and place it inside a models/ folder.
 
-1️⃣ Create the models folder:
+
+## 📌 Download & Add LLaMA 2 Model
+The LLaMA 2 model file is NOT included in this repository due to its large size. You must manually download it and place it inside a models/ folder.
+
+### 1️⃣ Create the models folder:
 
 mkdir models
-2️⃣ Download the model file:
+
+### 2️⃣ Download the model file:
 Download LLaMA 2 (7B Chat - GGUF format) from:
+
 🔗 Meta AI (Official)
+
 🔗 TheBloke (Optimized GGUF)
 
-3️⃣ Move the downloaded model to the models/ folder:
+### 3️⃣ Move the downloaded model to the models/ folder:
 
 mv /path/to/llama-2-7b-chat.Q4_K_M.gguf models/
 (Replace /path/to/ with the actual file location.)
 
-🏃 Run the Project
-🔹 8️⃣ Start the Django Backend
+
+## 🏃 Run the Project
+
+### 🔹 8️⃣ Start the Django Backend
 
 python manage.py runserver
-🚀 The backend runs at http://127.0.0.1:8000/
+The backend runs at http://127.0.0.1:8000/
 
-🔹 9️⃣ Start the Streamlit Frontend
+### 🔹 9️⃣ Start the Streamlit Frontend
 
-cd streamlit_app
+cd frontend
 streamlit run app.py
-🚀 The frontend runs at http://localhost:8501/
 
-🔑 User Authentication (Login/Register)
+The frontend runs at http://localhost:8501/
+
+## 🔑 User Authentication (Login/Register)
 1️⃣ Register using the sidebar
 2️⃣ Login with username & password
 3️⃣ Generate blogs using AI model
 4️⃣ Save & view generated blogs in history
 
-⚡ Optimizations for Faster Model Inference
+## ⚡ Optimizations for Faster Model Inference
+
 ✅ Reduced max_new_tokens for faster output
 ✅ Used streaming for real-time blog generation
 ✅ Increased batch_size to process more tokens at once
 ✅ Lowered temperature for more stable responses
 
-🎯 Project Features
+## 🎯 Project Features
+
 ✅ User Registration & Login (JWT Auth)
 ✅ Generate AI Blogs (LLaMA 2 Model)
 ✅ Save Generated Blogs to MySQL
 ✅ View Saved Blogs in Sidebar
 ✅ Clean & Minimal UI
 
-🤝 Contributing
+## 🤝 Contributing
 Feel free to fork, improve, and submit pull requests! 🚀
 
-📞 Contact
+## 📞 Contact
 📧 Email: snehakamatam28@example.com
 🌐 GitHub: github.com/sneha2835
 
-📌 Create .gitignore
+
+## 📌 .gitignore
 To avoid pushing unnecessary files, create a .gitignore file:
-
-
 venv/
 __pycache__/
 *.pyc
 .env
 models/llama-2-7b-chat.Q4_K_M.gguf
-📌 Final Steps to Push Code to GitHub
-1️⃣ Initialize Git repository (if not already)
 
-git init
-2️⃣ Add all files to Git tracking
-
-git add .
-3️⃣ Commit with a meaningful message
-
-git commit -m "Initial commit: Added full project with AI model"
-4️⃣ Link to your GitHub repository
-
-git remote add origin https://github.com/sneha2835/AI_Blog_Generation.git
-5️⃣ Push code to GitHub
-
-git branch -M main
-git push -u origin main
-✅ Final Checklist Before Pushing to GitHub
+### ✅ Final Checklist Before Pushing to GitHub
 🔲 All project files are present
 🔲 Database setup instructions are correct
 🔲 Git ignore file is added (.gitignore)
 🔲 Project runs successfully before pushing
 
+
+This README.md provides:
+1. Clear project overview and features
+2. Detailed installation instructions
+3. Project structure visualization
+4. Configuration guidance
+5. Usage instructions
+6. Contribution guidelines
+7. Contact information

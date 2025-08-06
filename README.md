@@ -137,26 +137,25 @@ streamlit run app.py
 
 The frontend runs at http://localhost:8501/
 
+
 ## 🔑 User Authentication (Login/Register)
-1️⃣ Register using the sidebar
-2️⃣ Login with username & password
-3️⃣ Generate blogs using AI model
-4️⃣ Save & view generated blogs in history
+1️⃣ Register using the sidebar  
+2️⃣ Login with username & password  
+3️⃣ Generate blogs using AI model  
+4️⃣ Save & view generated blogs in history  
 
 ## ⚡ Optimizations for Faster Model Inference
-
-✅ Reduced max_new_tokens for faster output
-✅ Used streaming for real-time blog generation
-✅ Increased batch_size to process more tokens at once
-✅ Lowered temperature for more stable responses
+✅ Reduced max_new_tokens for faster output  
+✅ Used streaming for real-time blog generation  
+✅ Increased batch_size to process more tokens at once  
+✅ Lowered temperature for more stable responses  
 
 ## 🎯 Project Features
-
-✅ User Registration & Login (JWT Auth)
-✅ Generate AI Blogs (LLaMA 2 Model)
-✅ Save Generated Blogs to MySQL
-✅ View Saved Blogs in Sidebar
-✅ Clean & Minimal UI
+✅ User Registration & Login (JWT Auth)  
+✅ Generate AI Blogs (LLaMA 2 Model)  
+✅ Save Generated Blogs to MySQL  
+✅ View Saved Blogs in Sidebar  
+✅ Clean & Minimal UI  
 
 ## 🤝 Contributing
 Feel free to fork, improve, and submit pull requests! 🚀
